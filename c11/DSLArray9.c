@@ -35,6 +35,7 @@ void main()
         }
         flag=0;
     }
+    printf("Union of sets are \n");
     for(i=0;i<z;i++)
     {
         printf("%d ",c[i]);

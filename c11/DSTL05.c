@@ -1,32 +1,29 @@
 #include<stdio.h>
+#include<math.h>
 void main()
 {
-    int a[100],i,j,k,n;
-    printf("Enter number of terms\n");
-    scanf("%d",&n);
-    printf("Enter terms\n");
-    for(i=0;i<n;i++)
+    int a[100],i,j,size,m;
+    printf("DEVANSH KARNWAL\n");
+    printf("Enter size of set A\n");
+    scanf("%d",&m);
+    printf("Enter elements of set A\n");
+    for(i=0;i<m;i++)
     {
         scanf("%d",&a[i]);
     }
-    printf("{ ");
-    for(i=0;i<n;i++)
+    size=pow(2,m);
+    for(i=0;i<size;i++)
     {
-        for(k=1;k<2;k++)
-            printf("(%d),",a[i]);
-        for(j=0;j<n;j++)
+        printf("(");
+        for(j=0;j<m;j++)
         {
-            printf("(%d %d),",a[i],a[j]);
+            if(i&1<<j)
+            {
+                printf("%d ",a[j]);
+            }
         }
-
+        printf(")");
+        printf("\n");
     }
-    printf("(");
-    for(k=0;k<n;k++)
-    {
-        printf("%d,",a[k]);
-    }
-    printf(")");
-    printf("{}");
-    printf(" }");
 }
 
